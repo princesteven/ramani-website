@@ -5,6 +5,9 @@ import Team from './Team';
 import Projects from './Projects';
 import Contacts from './Contacts';
 import NotFound from './404'
+import CMC from './CMC'
+import THE from './THE'
+import HL from './HL'
 import { Router } from "@reach/router";
 
 const App = () => (
@@ -14,6 +17,9 @@ const App = () => (
     <Team path="team" />
     <Projects path="projects" />
     <Contacts path="contacts" />
+    <CMC path="services/construction-and-mining-constructors" />
+    <THE path="services/transportation-of-heavy-equipment" />
+    <HL path="services/rental" />
     <NotFound path="404" default />
   </Router>
 )

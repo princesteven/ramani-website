@@ -85,15 +85,15 @@ export const menus = [
         'children': [
             {
                 'name': 'Hiring & Leasing of Earth Moving Equipment',
-                'link': '#',
+                'link': '/services/rental',
             },
             {
                 'name': 'Construction & Mining Constructors',
-                'link': '#',
+                'link': '/services/construction-and-mining-constructors',
             },
             {
                 'name': 'Transportation of Heavy Equipment',
-                'link': '#',
+                'link': '/services/transportation-of-heavy-equipment',
             },
         ]
     },
