@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('animation.css');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+/* Navbar Animation to change color when scrolling */
+nav.bg-transparent-black-animated {
+    -moz-animation: transparentBlackAnimated 1s linear;
+    -webkit-animation: transparentBlackAnimated 1s linear;
+    -o-animation: transparentBlackAnimated 1s linear;
+    -ms-animation: transparentBlackAnimated 1s linear;
+    animation: transparentBlackAnimated 1s linear;
+    background-color: #1B1B1B;
+}
+
+/* Navbar Animation End */
+
+/* Scroll bar Start */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FFA73C; 
+    border-radius: 10px;
+}
+
+/* Scrollbar End */
+
+/* Animation for slider words in Homepage */
+div.slider-subtitle > span.fadeInDown {
+    -moz-animation: fadeInDown 2s linear 1s;
+    -webkit-animation: fadeInDown 2s linear 1s;
+    -o-animation: fadeInDown 2s linear 1s;
+    -ms-animation: fadeInDown 2s linear 1s;
+    animation: fadeInDown 2s linear 1s;
+}
+
+div.slider-title > h2.fadeInLeft {
+    -moz-animation: fadeInLeft 2s linear 1s;
+    -webkit-animation: fadeInLeft 2s linear 1s;
+    -o-animation: fadeInLeft 2s linear 1s;
+    -ms-animation: fadeInLeft 2s linear 1s;
+    animation: fadeInLeft 2s linear 1s;
+}
+
+div.slider-title > h2.fadeInRight {
+    -moz-animation: fadeInRight 2s linear 1s;
+    -webkit-animation: fadeInRight 2s linear 1s;
+    -o-animation: fadeInRight 2s linear 1s;
+    -ms-animation: fadeInRight 2s linear 1s;
+    animation: fadeInRight 2s linear 1s;
+}
+
+div.slider-btnText > button.fadeInUp {
+    -moz-animation: fadeInUp 2s linear 1s;
+    -webkit-animation: fadeInUp 2s linear 1s;
+    -o-animation: fadeInUp 2s linear 1s;
+    -ms-animation: fadeInUp 2s linear 1s;
+    animation: fadeInUp 2s linear 1s;
+}
+/* Animation for slider words in Homepage End */

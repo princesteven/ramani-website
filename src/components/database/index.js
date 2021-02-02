@@ -1,0 +1,6 @@
+export { clients } from './clients'
+export { fleet_thumbs } from './fleetThumbs'
+export { menus } from './menu'
+export { team } from './team'
+export { projects } from './projects'
+export { contacts } from './contacts'

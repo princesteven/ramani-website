@@ -1,0 +1,17 @@
+.swiper-button-prev, .swiper-button-next {
+    color: white;
+    display: none;
+    font-size: 1px;
+}
+
+.swiper-container:hover .swiper-button-next, .swiper-container:hover .swiper-button-prev {
+    display: block;
+}
+
+.swiper-container {
+    align-items: center !important;
+    position: relative;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
