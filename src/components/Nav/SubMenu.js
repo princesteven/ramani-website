@@ -7,7 +7,7 @@ const SubMenu = ({ subs }) => {
     subs = _.orderBy(subs, ['name'], ['asc']);
 
     const renderSubMenu = subs.map(submenu => 
-        <Link to={submenu.link} className="border-b border-solid border-gray-75 text-black-faint px-4 pt-3 pb-2 block hover:bg-hover hover:text-white text-14px">
+        <Link to={submenu.link()} className="border-b border-solid border-gray-75 text-black-faint px-4 pt-3 pb-2 block hover:bg-hover hover:text-white text-14px">
             {submenu.name}
         </Link>
     )

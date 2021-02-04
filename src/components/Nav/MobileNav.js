@@ -20,7 +20,7 @@ const MobileNav = () => {
 
     const renderMenu = menus.map(menu => 
         <li className="relative group py-6">
-            <Link to={menu.children ? '#' : menu.link} className={`hover:text-hover ${menu.children && 'flex justify-between'}`}>
+            <Link to={menu.children ? '#' : menu.link()} className={`hover:text-hover ${menu.children && 'flex justify-between'}`}>
                 <span>{menu.name}</span>
                 {menu.children &&
                     <svg className="w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg> 

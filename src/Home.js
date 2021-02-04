@@ -1,3 +1,4 @@
+import React from 'react'
 import Layout from './components/layout'
 import _ from 'lodash'
 import { Link } from "@reach/router";
@@ -6,11 +7,19 @@ import Section from './components/Section'
 import Statistics from './components/Statistics'
 import Title from './components/Section/sectionTitle'
 import { fleet_thumbs } from "./components/database";
+import { menus } from "./components/database";
 
-function App() {
-
+function Home() {
   const thumbs = _.orderBy(fleet_thumbs, ['name'], ['asc']);
+  
+  const fleets = menus.filter( fleet => fleet.name.toLowerCase() === 'our fleet' )
+  
+  let fleet = fleets.map( fleet => fleet.children)
+
+  fleet = _.orderBy(fleet[0], ['name'], ['asc'])
+
   const ramani_features = ['Team of proffesionals', 'Reliable Machinery', 'Affordable Prices'];
+  
   const ramani_statistics = [
     {
       'figure': '100+',
@@ -21,14 +30,14 @@ function App() {
       'description': 'Years of Experience',
     },
   ]
-
-  const renderFleetThumbs = thumbs.map(thumb => 
+  
+  const renderFleetThumbs = thumbs.map( (thumb, index) => 
     <div className="mt-6 md:w-350px bg-transparent-black group relative">
       <div className="md:h-350px relative overflow-hidden hover:cursor-pointer group">
         <img src={thumb.image} alt={thumb.name} className="group-hover:scale-110 transition duration-500 ease-in-out transform w-full h-full" />
         <div className="absolute top-0 right-0 left-0 h-full group-hover:bg-transparent-hover"></div>
         <div className="absolute top-1/2 left-1/3">
-          <Link to={thumb.link} className="bg-transparent-gray tracking-wider rounded-full py-3 px-6 text-center border border-black border-solid text-black uppercase font-oswald font-semibold hidden group-hover:block hover:bg-transparent-hover hover:text-white">Read More</Link>
+          <Link to={fleet[index].link()} className="bg-transparent-gray tracking-wider rounded-full py-3 px-6 text-center border border-black border-solid text-black uppercase font-oswald font-semibold hidden group-hover:block hover:bg-transparent-hover hover:text-white">Read More</Link>
         </div>
       </div>
       <div className="px-6 py-2 font-oswald uppercase group-hover:bg-white">
@@ -86,7 +95,7 @@ function App() {
         </div>
         <div className="bg-yellow ">
             <img src={h1} alt={'h1'} className="w-full" />
-            <div className="grid grid-cols-3 gap-0 py-3">
+            <div className="grid grid-cols-3 gap-0 bottom-0 py-3">
               <span className="text-white font-oswald font-semibold text-24px text-center col-span-2 border-r border-white border-solid">Ramani Investment</span>
               <div className="justify-self-center">
               <svg className="w-12 h-12 text-white font-oswald font-semibold text-24px" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -101,4 +110,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

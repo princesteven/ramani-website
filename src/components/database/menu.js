@@ -1,7 +1,9 @@
 export const menus = [
     {
         'name': 'Home',
-        'link': '/'
+        'link': function () {
+            return `/`
+        },
     },
     {
         'name': 'Who We Are',
@@ -9,11 +11,15 @@ export const menus = [
         'children': [
             {
                 'name': 'About Us',
-                'link': '/about',
+                'link': function () {
+                    return `/about`
+                },
             },
             {
                 'name': 'Our Team',
-                'link': '/team',
+                'link': function () {
+                    return `/team`
+                },
             },
         ]
     },
@@ -22,60 +28,102 @@ export const menus = [
         'link': '#',
         'children': [
             {
+                'id': 'excavtors',
                 'name': 'Excavators',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'hydraulic-breakers',
                 'name': 'Hydraulic Breaker/ Hummer',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'motor-graders',
                 'name': 'Motor Graders',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'vibrating-compactors',
                 'name': 'Single drum Vibrating Compactors',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'wheel-loaders',
                 'name': 'Wheel loaders',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'bulldozers',
                 'name': 'Bulldozers',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'low-bed-trucks',
                 'name': 'Low Bed Trucks',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'drill-rigs',
                 'name': 'Drill Rigs',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'water-bowsers',
                 'name': 'Water Bowser',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'dump-trucks',
                 'name': 'Articulated Dump Trucks',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'tippers',
                 'name': 'Tippers',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'fuel-bowsers',
                 'name': 'Fuel Bowser',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'light-plants',
                 'name': 'Light Plant',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
             {
+                'id': 'water-pumps',
                 'name': 'Water Pump',
-                'link': '#',
+                'link': function () {
+                    return `/fleet/${this.id}`
+                },
             },
         ]
     },
@@ -85,24 +133,34 @@ export const menus = [
         'children': [
             {
                 'name': 'Hiring & Leasing of Earth Moving Equipment',
-                'link': '/services/rental',
+                'link': function () {
+                    return `/services/rental`
+                },
             },
             {
                 'name': 'Construction & Mining Constructors',
-                'link': '/services/construction-and-mining-constructors',
+                'link': function () {
+                    return `/services/construction-and-mining-constructors`
+                },
             },
             {
                 'name': 'Transportation of Heavy Equipment',
-                'link': '/services/transportation-of-heavy-equipment',
+                'link': function () {
+                    return `/services/transportation-of-heavy-equipment`
+                },
             },
         ]
     },
     {
         'name': 'Projects',
-        'link': '/projects'
+        'link': function () {
+                    return `/projects`
+                },
     },
     {
         'name': 'Contacts',
-        'link': '/contacts'
+        'link': function () {
+                    return `/contacts`
+                },
     },
 ]
